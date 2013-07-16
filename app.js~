@@ -1,0 +1,17 @@
+Ext.application({
+    requires: ['Ext.container.Viewport'],
+    name: 'CP',
+
+    appFolder: 'app',
+	controllers: [
+			'Users'
+		],
+
+
+    launch: function() {
+        Ext.create('Ext.container.Viewport', {
+
+           
+        });
+    }
+});
