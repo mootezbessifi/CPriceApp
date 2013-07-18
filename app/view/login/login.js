@@ -2,11 +2,17 @@ Ext.define('CP.view.login.login',{
 			extend:'Ext.form.Panel',
 			alias:'widget.loginview',
 			title:'Login',
-			width:400,
+			width:300,
             height: 150,
 			frame:'true',
 			draggable:true,
-			
+			//CSS3BorderRadius:true,
+			listeners:{
+				'afterrender':function(){
+					console.log(this.title);
+					}
+				
+				},
 			items:[
 				{
 				xtype:'textfield',

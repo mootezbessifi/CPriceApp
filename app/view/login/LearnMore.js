@@ -5,13 +5,11 @@ Ext.define('CP.view.login.LearnMore',{
     width: 300,
     height: 500,
     bodyPadding: 10,
+	collapsible: true,
+	draggable:true,
     title: '<center><b>Learn More</b><center>',
+	html:'<center>bonjour</center>',  
     
-        html:'<center>bonjour</center>',
     
-    buttons: [{
-        text: 'Hide'
-    }]
-
 			
-		});
+});

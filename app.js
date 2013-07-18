@@ -5,20 +5,15 @@ Ext.application({
 	appFolder: 'app',
 	controllers: ['controller'],
 	autoScroll:true,
-
+	
     launch: function() {
-    var log= Ext.create('Ext.container.Viewport', {
+		var log= Ext.create('Ext.container.Viewport', {
           
             items: [
             {
                 xtype: 'loginview',         
             },
-				{
-				xtype:'button',
-				text:'Sign In',
-				width:200,
-				height: 100,			
-			},
+				
 			{
 					xtype: 'learnview',
 			}
@@ -26,6 +21,12 @@ Ext.application({
 			
        
         });
-        log.items.first().setPosition(900,300);
+			log.items.first().setPosition(902,168);
+			/*$(document).ready(function(){
+			$("div").click(function(){
+			alert("The paragraph was clicked.");
+			});
+			});*/
+
     }
 });
