@@ -3,11 +3,6 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-#IcoLog{
- position: fixed; 
-  bottom: 50px; 
-  right: 50px; 
-}
 
 #signButton{
 

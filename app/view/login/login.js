@@ -6,7 +6,7 @@ Ext.define('CP.view.login.login',{
             height: 150,
 			frame:'true',
 			draggable:true,
-			//CSS3BorderRadius:true,
+			resizable:true,
 			listeners:{
 				'afterrender':function(){
 					console.log(this.title);
