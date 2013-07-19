@@ -7,27 +7,28 @@ Ext.application({
 	autoScroll:true,
 	
 	
+	
     launch: function() {
 		var log= Ext.create('Ext.container.Viewport', {
           
             items: [
             {
-                xtype: 'loginview',         
-            },
-				
-			{
-					xtype: 'learnview',
-			}
+                xtype: 'loginview',
+                id:'logview',
+                         
+            }
 			],
 			
        
         });
-			log.items.first().setPosition(902,168);
-			/*$(document).ready(function(){
-			$("div").click(function(){
-			alert("The paragraph was clicked.");
-			});
-			});*/
+			log.items.first().setPosition(898,168);
+			$(document).ready(function(){
+			$("#textButton").click(function(){
+					Ext.getCmp("inscrit").hide();
 
+				//Ext.get("logview").slideOut();
+			});
+			});
+			
     }
 });

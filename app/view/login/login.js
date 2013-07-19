@@ -3,10 +3,11 @@ Ext.define('CP.view.login.login',{
 			alias:'widget.loginview',
 			title:'Login',
 			width:300,
-            height: 150,
+            height: 160,
 			frame:'true',
-			draggable:true,
-			resizable:true,
+			//hiden:true,
+			cls: 'round-corners',
+			id:'inscrit',
 			listeners:{
 				'afterrender':function(){
 					console.log(this.title);
@@ -17,23 +18,28 @@ Ext.define('CP.view.login.login',{
 				{
 				xtype:'textfield',
 				fieldLabel:'Username',
+				margin: '10 20 10 0',
+				name:'username',
 				itemId: 'username', 
 				allowblank: false,
-				height: 30,
 				},
 				{
 				 xtype: 'textfield',
-				 fieldLabel: 'password',
+				 fieldLabel: 'Password',
+				 margin: '0 30 0 0',
 				 name: 'password', 
 				 itemId: 'password', 
 				 allowblank: false, 
 				 inputType: 'password',	
-				 height: 30,
+				 
 				}
 			],
 			buttons:[{
 			text:'Sign In',
 			action:'connect',
+			margin: '5 5 5 5',
+
+			
 				/*listeners :{ 
 					click: function(){ 
 						var username = this.up('form').down('#username').getValue(); 
