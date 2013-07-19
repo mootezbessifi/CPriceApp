@@ -6,6 +6,7 @@ Ext.application({
 	controllers: ['controller'],
 	autoScroll:true,
 	
+	
     launch: function() {
 		var log= Ext.create('Ext.container.Viewport', {
           

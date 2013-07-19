@@ -1,6 +1,7 @@
 body { 
   background: url(background.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
+
   background-size: cover;
 }
 
@@ -21,16 +22,22 @@ body {
 	-webkit-border-radius: 15px;
 	-webkit-box-shadow:rgb(110,110,110) 5px 5px 5px;
 	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s,background 0.5s,width 0.5s,height 0.5s;
+	
+	border-radius: 15px;
+	box-shadow:rgb(110,110,110) 5px 5px 5px;
+	-moz-transition: -webkit-transform 0.5s, opacity 0.5s,background 0.5s,width 0.5s,height 0.5s;
 }
 #signButton:hover{
 	-webkit-transform:zoom();
+	transform:();
+
 	opacity:1;
 	background:#0000FF;
 	width:310px;
 	height:70px;
 }
 #textButton{
-	font:bold 30px Century Gothic;
+	font:bold 28px Century Gothic;
 	color:white;
 
 }
