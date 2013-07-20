@@ -12,11 +12,11 @@ Ext.define('CP.controller.controller', {
         });
     },
     actionLogin: function(button) {
-        console.log('clicked the Save button');      
-        
-        //var username = up('form').down('#username').getValue(); 
-		//var password = up('form').down('#password').getValue(); 
-		alert("bien jouer");
-    },
+
+        //here goes the code of the button's handler
+
+        //var username = up('form').down('#username').getValue();
+		//var password = up('form').down('#password').getValue();
+    }
 
 });
