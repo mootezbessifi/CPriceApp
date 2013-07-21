@@ -17,7 +17,7 @@ Ext.application({
                 id:'logview'
             }],
         });
-			log.items.first().setPosition(898,168);
+			log.items.first().setPosition(898,180);
 			$(document).ready(function(){
 			$("#textButton").click(function(){
 				var portal = Ext.getCmp("mainPortal");
