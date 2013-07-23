@@ -1,3 +1,4 @@
+/*
 Ext.override('Ext.layout.Layout', {
     renderItem: function(item, target, position) {
         
@@ -8,7 +9,7 @@ Ext.override('Ext.layout.Layout', {
 this.callOverridden(arguments);
 }
 });
-
+*/
 Ext.define('CP.view.login.login',{
 			extend:'Ext.form.Panel',
 			alias:'widget.loginview',
@@ -23,19 +24,18 @@ Ext.define('CP.view.login.login',{
 				{
 					xtype:'textfield',
 					fieldLabel:'Username <span class="req" style="color:red"> * </span> ',
-					allowBlank: 0,
+					allowBlank: false,
 					margin: '10 20 10 0',
 					name:'username',
 					itemId: 'username', 
-					allowblank: false,
+					
 				},{
 					 xtype: 'textfield',
 					 fieldLabel: 'Password <span class="req" style="color:red"> * </span>',
-					 allowBlank: 0,
+					 allowBlank: false,
 					 margin: '0 30 10 0',
 					 name: 'password', 
 					 itemId: 'password', 
-					 allowblank: false, 
 					 inputType: 'password',
 					 vtypeText:"exple@mail.fr",	 
 				},{

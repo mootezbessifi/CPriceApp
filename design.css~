@@ -37,9 +37,11 @@ body {
 	transform:();
 
 	opacity:1;
-
+<<<<<<< HEAD
+	//background:#0033FF;
+=======
 	background:#0066FF;
-
+>>>>>>> 437c846b550160dd7a19014fe681fc67c2c419ee
 	width:310px;
 	height:70px;
 }
