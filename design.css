@@ -1,5 +1,5 @@
 body { 
-  background: url(test.png) no-repeat center center fixed; 
+  background: url(assets/images/test.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
 	background-size: cover;
    @background-position: left bottom;
@@ -9,7 +9,12 @@ body {
 .hideForm{
 	visibility:hidden;
 }
-
+.icon-add {
+    background-image: url(assets/images/add.jpg) !important;
+}
+.icon-delete {
+    background-image: url(assets/images/drop.jpg) !important;
+}
 #signButton{
 
 	display:block;

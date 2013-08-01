@@ -4,8 +4,8 @@
 session_start();		//On initialise les sessions
 //if(isset($_POST['connexion']))		//S'il s'agit du POST du formulaire de connexion 
 //{
-   $username = htmlentities($_POST['username'], ENT_QUOTES);
-   $pass = htmlentities($_POST['password'], ENT_QUOTES);
+   $username = htmlentities($_POST['log'], ENT_QUOTES);
+   $pass = htmlentities($_POST['pass'], ENT_QUOTES);
 
    //$filename = $adrr."php/my_sql.php";	//Classe de connexion à la bdd --> plus sécurisé, pratique et simple
    $filename = "my_sql.php";
@@ -18,18 +18,18 @@ session_start();		//On initialise les sessions
    if($maclasse->num_rows() == 0)		//login non trouvé
    {
       //message d'erreur général : on met la raison de l'erreur sans préciser quel type de champ est a l'origine du problème
-      die("{success: false, errors: { reason: 'Authentification &eacute;chou&eacute;e. Veuillez r&eacute;essayer.' }}");
+      die("{success: false, msg: 'Authentification echouee. Veuillez reessayer.' }");
    }
    else
    {
       if ($pass <> $maclasse->row['password'])		//pass incorrecte
       {
          //message d'erreur particulier car on sait quel champ est à l'origine du problème, et on note donc l'id
-         die("{success: false, errors: [{id:'pass', msg:'Votre mot de passe est incorrect'}]}");
+         die("{success: false, msg:'Votre mot de passe est incorrect'}");
       }
       elseif($maclasse->row['idAbonnee']==0)		//compte non activé
       {
-         die("{success: false, errors: { reason: \"Vous devez valider votre compte avant de pouvoir l'utiliser.\" }}");
+         die("{success: false,msg: 'Vous devez valider votre compte avant de pouvoir l'utiliser. }");
       }
       else
       {
@@ -37,8 +37,7 @@ session_start();		//On initialise les sessions
          $_SESSION['idAbonnee'] = $maclasse->row['idAbonnee'];
          $_SESSION['name'] = $maclasse->row['name'];
          $_SESSION['password'] = $maclasse->row['password'];
-
-         if (isset($_POST['save']))		//si l'utilisateur veut conserver les cookies
+         if (isset($_POST['sess']))		//si l'utilisateur veut conserver les cookies
          {
             setcookie("idAbonnee", $maclasse->row['idAbonnee'], time()+365*60*3600);
             setcookie("password", $maclasse->row['password'], time()+365*60*3600);
@@ -46,9 +45,9 @@ session_start();		//On initialise les sessions
          }
          //On concatène le prénom et le nom de l'utilisateur pour le message d'accueil
          $msg = "Bienvenue ".$_SESSION['name']." ";
-         die("{success: true, msg:{reason:'".$msg."'}}");
+         die("{success: true, msg:'".$msg."'}");
          echo $msg;
-      }
+         }
    }
-//}
+   $maclasse.close();
 ?>

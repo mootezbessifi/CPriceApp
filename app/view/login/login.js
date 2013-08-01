@@ -5,12 +5,22 @@ Ext.override('Ext.layout.Layout', {
     if (item && item.isFieldLabelable && !item.rendered && item.fieldLabel && item.allowBlank == false) {
         item.fieldLabel += ' <span class="req" style="color:red"> * </span>';
 }
-        
+
 this.callOverridden(arguments);
 }
 });
 */
-Ext.define('CP.view.login.login',{
+Ext.Loader.setPath('Ext.ux', 'assets/js/statusbar/');
+
+var status = Ext.create('Ext.Panel', {
+    bbar: Ext.create('Ext.ux.StatusBar', {
+        
+        id: 'form-statusbar',
+        defaultText: '<font color = "green"><b>Ready<b></font>'
+        })
+});
+
+var log = Ext.define('CP.view.login.login',{
 			extend:'Ext.form.Panel',
 			alias:'widget.loginview',
 			id:'loginForm',
@@ -27,7 +37,8 @@ Ext.define('CP.view.login.login',{
 					allowBlank: false,
 					margin: '10 20 10 0',
 					name:'username',
-					itemId: 'username', 
+					itemId: 'username',
+					blankText:"Username Required !", 
 					
 				},{
 					 xtype: 'textfield',
@@ -37,25 +48,31 @@ Ext.define('CP.view.login.login',{
 					 name: 'password', 
 					 itemId: 'password', 
 					 inputType: 'password',
-					 vtypeText:"exple@mail.fr",	 
+					 vtypeText:"exple@mail.fr",
+					 blankText:"Password Required !"	 
 				},{
 					xtype:'checkbox',
-					boxLabel : '',
-					fieldLabel: 'Remember me',
+					boxLabel : 'Remember me',
+					fieldLabel: '',
+					margin: '10 20 0 0',
 					checked: true,
-					style: 'left:-104px;position:relative;',
-					name: 'save'
+					style: 'right:-104px;position:relative;',
+					id: 'save'
 				},
 				{
-					xtype: 'box',
-					autoEl: {tag: 'a', href: 'http://www.google.com', html: '<font color="black"><center>Password forgotten?</center></font>'},
-					margin: '0 0 10 0',
+				 html: '<a class="lien" href="recup.php"><font color="black"><center>Password forgotten?</center></font></a>',	
+					bodyStyle:
+					{
+						paddingTop: '20px'
+					},
+					margin: '0 20 10 0'
 				},
 				{
 					xtype: 'hidden',        
 					id: 'connexion',
 					name: 'connexion'
-				}
+				},
+				status
 				],
 			listeners:{
 					//sliding the login form up when rendering it. The same thing is possible with 'afterrender' event
@@ -68,14 +85,7 @@ Ext.define('CP.view.login.login',{
 				action:'connect',
 				id:'signin',
 				margin: '5 5 5 5',	
-				/*listeners :{
-					click: function(){ 
-						var username = this.up('form').down('#username').getValue(); 
-						var password = this.up('form').down('#password').getValue(); 
-						alert(username+"   "+password);
-					} 
-				}*/
-			
+				
 			}]
 	
 	});

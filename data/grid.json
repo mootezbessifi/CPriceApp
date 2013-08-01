@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "catalogView": [
+        {"id": 1, company:'3m Co', price:71.72, change:0.02, lastChange:'9/2 12:00am'},
+        {"id": 2, company:'3p Co', price:71.72, change:0.02, lastChange:'9/5 12:00am'},
+        {"id": 3, company:'3s C1', price:71.72, change:0.02, lastChange:'9/3 12:00am'},
+        {"id": 4, company:'3o kk', price:71.72, change:0.02, lastChange:'9/5 12:00am'},
+        {"id": 5, company:'3n Cp', price:71.72, change:0.02, lastChange:'9/7 12:00am'}
+    ]
+}

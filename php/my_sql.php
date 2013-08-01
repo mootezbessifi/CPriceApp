@@ -17,7 +17,7 @@ class my_sql{
 	
 //constructeur de la classe
 function my_sql(
-$host    = 'localhost',       
+$host    = 'localhost',
 $user    = 'root',        
 $pass    = 'huckerman1990',       // string    Mot de passe
 $dbname  = 'base_projet',    // string    Nom de la base de données
@@ -68,7 +68,7 @@ function connect(){
 //Execute la requete SQl et enregistre le resultset dans les attributs
 function query($query)
 {
-    $this->num = 0;
+	$this->num = 0;
     $this->row = array();
     $this->res = mysql_query($query, $this->db_id );
     return $this->res;
