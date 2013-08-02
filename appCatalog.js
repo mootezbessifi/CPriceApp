@@ -17,17 +17,15 @@ Ext.application({
 	
 	launch: function() {
 		Ext.create('Ext.container.Viewport', {
-			layout:'border',
-            items: [{
-                xtype: 'LiveSearchGrid',
-                region: 'center',
-                id:'LSGP'
-            },{
-				xtype:'panel',
-				width: '10%',
-				title:'Another Viewport side',
-				region:'west'
-			}]
+			items:{
+				xtype:'tabpanel',
+	            items: [{
+					xtype: 'LiveSearchGrid',
+                	id:'LSGP'
+            	},{
+					title:'Another Viewport side',
+				}]
+			}
         });				
     }
     

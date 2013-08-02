@@ -1,7 +1,7 @@
 Ext.define('CP.controller.controller', {
     extend: 'Ext.app.Controller',
 	
-	views:['login.login','login.LearnMore'],
+	views:['login.login'],
 	 
 	 init: function() {
         this.control({

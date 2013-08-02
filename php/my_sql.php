@@ -14,11 +14,11 @@ class my_sql{
     var $row    = array();
 	//Il s'agit du tableau où seront stockés les résultats de la requête sql
     var $num    = 0;
-	
+
 //constructeur de la classe
 function my_sql(
 $host    = 'localhost',
-$user    = 'root',        
+$user    = 'root',
 $pass    = 'huckerman1990',       // string    Mot de passe
 $dbname  = 'base_projet',    // string    Nom de la base de données
 $connect = true      // boolean    Connexion lors de la création de l'objet
@@ -28,7 +28,7 @@ $connect = true      // boolean    Connexion lors de la création de l'objet
     $this->pass   = (string)$pass;
     $this->user   = (string)$user;
 	$this->dbname = (string)$dbname;
-	
+
 	if ( (bool)$connect === true )
 	{
 		// Etablie la connexion à la base de données

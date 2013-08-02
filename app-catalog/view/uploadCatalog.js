@@ -40,8 +40,7 @@ Ext.define('Cata.view.uploadCatalog',{
 						text: 'Upload',
 						handler: function(button) {
 							var form = Ext.getCmp('cataForm').getForm();
-							var store = Ext.getCmp('LSGP').getStore();
-							var view = Ext.getCmp('LSGP').getView();
+							var store = Ext.getCmp('LSGP').store;
 							if(form.isValid()){
 							var catalogName = Ext.getCmp('CatalogName').getValue();
 								form.submit({
@@ -56,9 +55,7 @@ Ext.define('Cata.view.uploadCatalog',{
 										button.up("window").close();
 									}
 								});
-								store.sync();
-								store.reload();
-								view.refresh();
+								store.load();
 							}
 								
 								

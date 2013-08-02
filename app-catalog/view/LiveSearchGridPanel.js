@@ -98,8 +98,7 @@ Ext.define('Cata.view.LiveSearchGridPanel',{
 					iconCls:'x-status-drop',
 					handler:me.deleteCatalog,
 					scope:me
-				}
-				]
+				}]
         });
         
         me.callParent(arguments);
