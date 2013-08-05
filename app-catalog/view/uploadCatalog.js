@@ -50,12 +50,12 @@ Ext.define('Cata.view.uploadCatalog',{
 									url: 'php/catalog-upload.php',
 									waitMsg: 'Uploading your catalog...',
 									success: function(fp, o) {
-										console.log(fp);
 										Ext.Msg.alert('Success', 'Your Catalog has been uploaded !');
 										button.up("window").close();
+										store.load();
 									}
 								});
-								store.load();
+
 							}
 								
 								

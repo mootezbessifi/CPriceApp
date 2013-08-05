@@ -20,10 +20,16 @@ Ext.application({
 			items:{
 				xtype:'tabpanel',
 	            items: [{
+					title:'Catalogs',
+					items:[{
 					xtype: 'LiveSearchGrid',
                 	id:'LSGP'
+					},{
+						xtype:'productShow'
+						
+					}]
             	},{
-					title:'Another Viewport side',
+					title:'Promotions',
 				}]
 			}
         });				

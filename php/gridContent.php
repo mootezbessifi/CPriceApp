@@ -14,5 +14,5 @@
 		$count--;
 	}
 	$result = array( 'success'=>true, 'dataGrid'=>$dataArray);
-    echo( json_encode($result ));
+    echo( json_encode($result));
 ?>
