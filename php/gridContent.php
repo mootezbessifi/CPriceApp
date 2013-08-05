@@ -6,8 +6,7 @@
 	include($filename);
    
     $maclasse = new my_sql();
-	$maclasse->query("SELECT * FROM catalog WHERE idAbonnee='".$userId."'");// or die('Connect Error (' . $maclasse->connect_errno . ') ' . $maclasse->connect_error);
-	//$dataArray = $maclasse->fetch_array();
+	$maclasse->query("SELECT * FROM catalog WHERE idAbonnee='".$userId."'");
 	$count=$maclasse->num_rows();
 	while($count){
 		$dataArray[] = $maclasse->fetch_array();

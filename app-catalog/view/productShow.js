@@ -55,7 +55,7 @@ var chart = Ext.define('Cata.view.productShow',{
             }]
 
 });
- var courbe = Ext.create('Ext.Window', {
+ /*var courbe = Ext.create('Ext.Window', {
         width: 800,
         height: 600,
         minHeight: 400,
@@ -64,4 +64,4 @@ var chart = Ext.define('Cata.view.productShow',{
         maximizable: true,
         layout: 'fit',
         items: chart    
-    });
+    });*/
