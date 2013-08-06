@@ -8,7 +8,7 @@ Ext.define('Cata.store.graphStore', {
 		url : 'php/graphShow.php',
         reader: {
             type: 'json',
-            //root: 'dataGrid',
+            root: 'data',
             successProperty: 'success'
         }
     }

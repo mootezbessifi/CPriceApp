@@ -59,7 +59,6 @@ Ext.define('Cata.view.LiveSearchGridPanel',{
                  xtype: 'textfield',
                  name: 'searchField',
                  hideLabel: true,
-                 width: 200,
                  listeners: {
                      change: {
                          fn: me.onTextFieldChange,

@@ -19,34 +19,26 @@ Ext.application({
 		Ext.create('Ext.container.Viewport', {
 			items:{
 				xtype:'tabpanel',
-				layout:'border',
+				layout:'fit',
 	            items: [{
 					title:'Catalogs',
-					//layout:'border',
 					items:[{
-					xtype: 'LiveSearchGrid',
-                	region:'South',
-                	id:'LSGP'
-					},{
-						xtype:'panel',
-						title:"testing",
-						region:'south',
-						//id:'panShow',
-						width: 800,
-						height: 600,
-						minHeight: 400,
-						minWidth: 550,
-						items:[{xtype:'productShow'}]
+						xtype: 'LiveSearchGrid',
+						id:'LSGP',
 						
 					},{
-						xtype:'panel',
-						title:"test",
-						region:'south',
-						width: 400,
-						height: 500,
-						minHeight: 400,
-						minWidth: 550
-						
+						title:"Dashboard",
+						id:'panShow',
+						height:400,
+						layout:'border',
+						items:[{
+							region:'center',
+							xtype:'productShow',
+							width:'70%'
+						},{
+							region:'east',
+							width:'30%'
+						}]
 					}]
             	},{
 					title:'Promotions',

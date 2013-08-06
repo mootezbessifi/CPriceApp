@@ -12,13 +12,13 @@ Ext.define('Cata.view.LiveSearchGrid' ,{
 		dataIndex: 'idCatalog'
 	},{
 		header     : 'IdAbonnee', 
-		width    : '25%', 
+		width    : '25%',
 		sortable : true,
 		dataIndex: 'idAbonnee'
 	},{
 		header     : 'nomCatalog', 
-		width    : '20%', 
-		sortable : true, 
+		width    : '20%',
+		sortable : true,
 		dataIndex: 'nomCatalog',
 	},{
 		xtype    : 'datecolumn',

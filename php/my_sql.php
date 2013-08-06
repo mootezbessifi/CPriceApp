@@ -19,7 +19,7 @@ class my_sql{
 function my_sql(
 $host    = 'localhost',
 $user    = 'root',
-$pass    = 'huckerman1990',       // string    Mot de passe
+$pass    = 'admin',       // string    Mot de passe
 $dbname  = 'base_projet',    // string    Nom de la base de données
 $connect = true      // boolean    Connexion lors de la création de l'objet
 )
