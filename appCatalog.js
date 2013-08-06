@@ -30,22 +30,10 @@ Ext.application({
 					},{
 						xtype:'panel',
 						title:"testing",
+						height:'60%',
 						region:'south',
-						//id:'panShow',
-						width: 800,
-						height: 600,
-						minHeight: 400,
-						minWidth: 550,
+						layout:'fit',
 						items:[{xtype:'productShow'}]
-						
-					},{
-						xtype:'panel',
-						title:"test",
-						region:'south',
-						width: 400,
-						height: 500,
-						minHeight: 400,
-						minWidth: 550
 						
 					}]
             	},{
