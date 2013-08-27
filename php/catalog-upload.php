@@ -1,10 +1,17 @@
 <?php
+	session_start();
+	if ( !isset($_SESSION['logged-in']) || $_SESSION['logged-in'] !== true) {
+		//header('Location: login.php');
+		$result="{\"success\":false}";
+		echo $result;
+		exit;
+	}
 	$upload_dir = "/var/www/CPriceApp/assets/UploadedCatalog";
-	$idAbonnee=$_COOKIE['idAbonnee'];
-	$nameAbonnee=$_COOKIE['name'];
+	$idAbonnee=$_SESSION['idAbonnee'];
+	$nameAbonnee=$_SESSION['name'];
 	$nameCatalog=htmlentities($_POST['filename'], ENT_QUOTES);
-	$dbConnectConfig = "my_sql.php";
 	
+	$dbConnectConfig = "my_sql.php";
 	if (file_exists($dbConnectConfig))
 		include($dbConnectConfig);
 

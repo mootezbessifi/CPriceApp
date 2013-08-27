@@ -1,13 +1,12 @@
 <?php
-///////Fichier servant à traiter le formulaire de login créé par extJS dans javascript/log_non_connecte.js et  javascript/log_connecte.js ///////
-
 session_start();		//On initialise les sessions
+
 //if(isset($_POST['connexion']))		//S'il s'agit du POST du formulaire de connexion 
 //{
    $username = htmlentities($_POST['log'], ENT_QUOTES);
    $pass = htmlentities($_POST['pass'], ENT_QUOTES);
-
    //$filename = $adrr."php/my_sql.php";	//Classe de connexion à la bdd --> plus sécurisé, pratique et simple
+//if(isset($_SESSION['log']) && isset($_SESSION['pass'])){
    $filename = "my_sql.php";
    if (file_exists($filename)) 
 		include($filename);
@@ -37,6 +36,7 @@ session_start();		//On initialise les sessions
          $_SESSION['idAbonnee'] = $maclasse->row['idAbonnee'];
          $_SESSION['name'] = $maclasse->row['name'];
          $_SESSION['password'] = $maclasse->row['password'];
+         $_SESSION['logged-in']=true;
          if (isset($_POST['sess']))		//si l'utilisateur veut conserver les cookies
          {
             setcookie("idAbonnee", $maclasse->row['idAbonnee'], time()+365*60*3600);
@@ -50,4 +50,5 @@ session_start();		//On initialise les sessions
          }
    }
    $maclasse.close();
+//}
 ?>

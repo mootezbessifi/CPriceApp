@@ -1,6 +1,13 @@
 <?php
+	session_start();
+	if ( !isset($_SESSION['logged-in']) || $_SESSION['logged-in'] !== true) {
+		//header('Location: login.php');
+		$result="{\"success\":false}";
+		echo $result;
+		exit;
+	}
 	$dbConnectConfig = "my_sql.php";
-		$idAbonnee=$_COOKIE['idAbonnee'];	
+		$idAbonnee=$_SESSION['idAbonnee'];	
 	if (file_exists($dbConnectConfig))
 		include($dbConnectConfig);
 	

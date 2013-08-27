@@ -1,5 +1,12 @@
 <?php
 	//$userId=$_COOKIE['idAbonnee'];
+	session_start();
+	if ( !isset($_SESSION['logged-in']) || $_SESSION['logged-in'] !== true) {
+		//header('Location: login.php');
+		$result="{\"success\":false}";
+		echo $result;
+		exit;
+	}
 	$filename = "my_sql.php";
 	if (file_exists($filename)) 
 	include($filename);

@@ -1,0 +1,70 @@
+body { 
+  background: url(../images/test.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+	background-size: cover;
+   @background-position: left bottom;
+   
+}
+
+.hideForm{
+	visibility:hidden;
+}
+.icon-add {
+    background-image: url(assets/images/add.jpg) !important;
+}
+.icon-delete {
+    background-image: url(assets/images/drop.jpg) !important;
+}
+#signButton{
+
+	display:block;
+	width:300px;
+	height:65px;
+	margin: 45px 5px 5px 5px;
+	padding:15px;
+	text-align:center;
+	border:1px solid blue;
+	background:#0066FF center fixed;
+	position: fixed; 
+	top: 50px; 
+    right: 100px;
+	opacity:1;
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow:rgb(110,110,110) 5px 5px 5px;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s,width 0.5s,height 0.5s;
+	
+	border-radius: 15px;
+	box-shadow:rgb(110,110,110) 5px 5px 5px;
+	-moz-transition: -webkit-transform 0.5s, opacity 0.5s,width 0.5s,height 0.5s;
+}
+#signButton:hover{
+	-webkit-transform:zoom();
+	transform:();
+
+	opacity:1;
+
+	background:#0066FF;
+
+	width:310px;
+	height:70px;
+}
+#textButton{
+	font:bold 28px Century Gothic;
+	color:white;
+}
+.round-corners {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    border-radius: 15px;
+}
+.misenforme
+{
+line-height:30px;
+} 
+.x-transparent {
+	background-color:red ;
+}
+

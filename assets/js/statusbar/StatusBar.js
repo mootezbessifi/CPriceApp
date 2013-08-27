@@ -41,9 +41,9 @@
  *     sb.clearStatus(); // once completeed
  *
  */
-Ext.define('Ext.ux.statusbar.StatusBar', {
+Ext.define('Ext.sb.statusbar.StatusBar', {
     extend: 'Ext.toolbar.Toolbar',
-    alternateClassName: 'Ext.ux.StatusBar',
+    alternateClassName: 'Ext.sb.StatusBar',
     alias: 'widget.statusbar',
     requires: ['Ext.toolbar.TextItem'],
     /**

@@ -5,7 +5,6 @@ var chart = Ext.define('Cata.view.productShow',{
 		extend: 'Ext.chart.Chart',
 		alias:'widget.productShow',
 		title:'Sales by category',
-		layout:'fit',
 		
 		id: 'chartCmp',
             xtype: 'chart',
@@ -29,7 +28,7 @@ var chart = Ext.define('Cata.view.productShow',{
                 position: 'bottom',
                 fields: ['category'],
                 title: 'Category'
-            }],
+			}],
             series: [{
                 type: 'column',
                 axis: 'left',
@@ -55,13 +54,3 @@ var chart = Ext.define('Cata.view.productShow',{
             }]
 
 });
- /*var courbe = Ext.create('Ext.Window', {
-        width: 800,
-        height: 600,
-        minHeight: 400,
-        minWidth: 550,
-        hidden: false,
-        maximizable: true,
-        layout: 'fit',
-        items: chart    
-    });*/
